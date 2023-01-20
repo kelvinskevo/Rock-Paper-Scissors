@@ -5,15 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Computers Choice: <span id="computers-choice"></span></h2>
-    <h2>Users Choice: <span id="users-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
+    <header class="header">
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <section class="newgame">
+      <input type="submit" id="newgame" value="newgame" />
+    </section>
+    <section class="buttons">
+      <div><button class="select" id="rock">✊</button></div>
+      <div><button class="select" id="paper">✋</button></div>
+      <div><button class="select" id="scissors">✌</button></div>
+    </section>
+    <section class="displayresults">
+      <h2 id="result"></h2>
+    </section>
+    <section class="choice">
+      <div class="userchoice">
+        <h1>Your Choice <span id="userscore">0</span></h1>
+        <span id="users-choice"></span>
+      </div>
+      <div class="computerchoice">
+        <h1>Computers Choice <span id="computerscore">0</span></h1>
+        <span id="computers-choice"></span>
+      </div>
+    </section>
 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <section class="footer">
+      <p class="text-center">
+        Copyright &copy;
+        <script>
+          var CurrentYear = new Date().getFullYear();
+          document.write(CurrentYear);
+        </script>
+        kelvinsHub
+      </p>
+    </section>
+    <div id="modal">
+      <div id="modal-content">
+        <h2 id="game"></h2>
+        <input type="submit" id="newgamemodal" value="newgame" />
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
